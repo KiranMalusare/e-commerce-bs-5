@@ -1,12 +1,641 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    Test 2
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Attire</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      integrity="sha512-Fo3rlrZj/k7ujTnHg4CGR2D7kSs0v4LLanw2qksYuRlEzO+tcaEPQogQ0KaoGN26/zrn20ImR1DfuLWnOo7aBA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="bootstrap-5.0.2-dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/main.css" />
+  </head>
+  <body>
+    <!-- navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white py-4 fixed-top">
+      <div class="container">
+        <a
+          href="index.html"
+          class="navbar-brand align-items-center d-flex order-lg-0"
+        >
+          <img src="images/shopping-bag-icon.png" alt="site-icon" />
+          <span class="text-uppercase fw-lighter ms-2">Attire</span>
+        </a>
+        <div class="order-lg-2">
+          <!-- <button class="btn position-relative">
+            <i class="fas fa-shopping-cart"></i>
+            <span
+              class="
+                badge
+                bg-primary
+                position-absolute
+                top-0
+                start-100
+                translate-middle
+              "
+              >5</span
+            >
+          </button>
+          <button class="btn position-relative">
+            <i class="fas fa-heart"></i>
+            <span
+              class="
+                badge
+                bg-primary
+                position-absolute
+                top-0
+                start-100
+                translate-middle
+              "
+              >2</span
+            >
+          </button>
+          <button class="btn position-relative">
+            <i class="fas fa-search"></i>
+          </button> -->
+        </div>
+        <button
+          class="navbar-toggler border-0"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNavAltMarkup"
+          aria-controls="navbarNavAltMarkup"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div
+          class="collapse navbar-collapse order-lg-1"
+          id="navbarNavAltMarkup"
+        >
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a
+                class="nav-link active text-center text-uppercase text-dark"
+                aria-current="page"
+                href="#header"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-center text-uppercase text-dark"
+                href="#Collections"
+                >Collection</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-center text-uppercase text-dark"
+                href="#specials"
+                >specials</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-center text-uppercase text-dark"
+                href="#blog"
+                >blog</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link text-center text-uppercase text-dark"
+                href="#about"
+                >about us</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- header -->
+    <header id="header">
+      <div
+        id="carouselExampleControls"
+        class="
+          container
+          justify-content-center
+          align-items-center
+          h-100
+          d-flex
+          carousel
+          slide
+        "
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-indicators">
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="0"
+            class="active"
+            aria-current="true"
+            aria-label="Slide 1"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="1"
+            aria-label="Slide 2"
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#carouselExampleIndicators"
+            data-bs-slide-to="2"
+            aria-label="Slide 3"
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="text-center carousel-item active">
+            <h2 class="text-white">Best Collection</h2>
+            <h1 class="text-white fw-bold text-uppercase py-2">New Arrivals</h1>
+            <button class="text-uppercase mt-3 action-btn">Shop New</button>
+          </div>
+          <div class="text-center carousel-item">
+            <h2 class="text-white">All new stock</h2>
+            <h1 class="text-white fw-bold text-uppercase py-2">
+              Latest Fashion
+            </h1>
+            <button class="text-uppercase mt-3 action-btn">Grab now</button>
+          </div>
+          <div class="text-center carousel-item">
+            <h2 class="text-white">Best Prices & offers</h2>
+            <h1 class="text-white fw-bold text-uppercase py-2">New Season</h1>
+            <button class="text-uppercase mt-3 action-btn">Buy now</button>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleControls"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleControls"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- Collection -->
+    <section id="Collections" class="py-4">
+      <div class="container">
+        <div class="text-center title">
+          <h2 class="position-relative d-inline-block">New Collections</h2>
+        </div>
+        <div class="row g-0">
+          <div class="d-flex justify-content-center my-3 flex-wrap">
+            <button type="button" class="action-btn m-2 active">All</button>
+            <button type="button" class="action-btn m-2">Best Sellers</button>
+            <button type="button" class="action-btn m-2">Featured</button>
+            <button type="button" class="action-btn m-2">New Arrivals</button>
+          </div>
+        </div>
+        <div class="collection-list row gy-4">
+          <div
+            class="
+              collection-item
+              d-flex
+              flex-column
+              col-md-6 col-lg-3
+              p-2
+              align-items-center
+            "
+          >
+            <div>
+              <img src="images/c_formal_gray_shirt.png" class="w-100" alt="" />
+              <span class="sale-label">sale</span>
+            </div>
+            <div>
+              <i class="fa fa-star selected-star"></i>
+              <i class="fa fa-star selected-star"></i>
+              <i class="fa fa-star selected-star"></i>
+              <i class="fa fa-star selected-star"></i>
+              <i class="fa fa-star selected-star"></i>
+            </div>
+            <p>Gray Shirt</p>
+            <p>$45.00</p>
+          </div>
+          <div
+            class="
+              collection-item
+              position-relative
+              d-flex
+              flex-column
+              col-md-6 col-lg-3
+              p-2
+              align-items-center
+            "
+          >
+            <div>
+              <img src="images/c_pant_girl.png" class="w-100" alt="" />
+              <span class="sale-label">sale</span>
+            </div>
+            <div>
+              <i class="fa fa-star selected-star"></i>
+              <i class="fa fa-star selected-star"></i>
+              <i class="fa fa-star selected-star"></i>
+              <i class="fa fa-star selected-star"></i>
+              <i class="fa fa-star selected-star"></i>
+            </div>
+            <p>Girl Pant</p>
+            <p>$40.00</p>
+          </div>
+          <div
+            class="
+              collection-item
+              position-relative
+              d-flex
+              flex-column
+              col-md-6 col-lg-3
+              p-2
+              align-items-center
+            "
+          >
+            <div>
+              <img src="images/c_polo-shirt.png" class="w-100" alt="" />
+              <span class="sale-label">sale</span>
+            </div>
+            <div>
+              <i class="fa fa-star selected-star"></i>
+              <i class="fa fa-star selected-star"></i>
+              <i class="fa fa-star selected-star"></i>
+              <i class="fa fa-star selected-star"></i>
+              <i class="fa fa-star selected-star"></i>
+            </div>
+            <p>Polo Shirt</p>
+            <p>$50.00</p>
+          </div>
+          <div
+            class="
+              collection-item
+              position-relative
+              d-flex
+              flex-column
+              col-md-6 col-lg-3
+              p-2
+              align-items-center
+            "
+          >
+            <div>
+              <img src="images/c_shirt-girl.png" class="w-100" alt="" />
+              <span class="sale-label">sale</span>
+            </div>
+            <div>
+              <i class="fa fa-star selected-star"></i>
+              <i class="fa fa-star selected-star"></i>
+              <i class="fa fa-star selected-star"></i>
+              <i class="fa fa-star selected-star"></i>
+              <i class="fa fa-star selected-star"></i>
+            </div>
+            <p>Shirt Girl</p>
+            <p>$35.00</p>
+          </div>
+          <div
+            class="
+              collection-item
+              position-relative
+              d-flex
+              flex-column
+              col-md-6 col-lg-3
+              p-2
+              align-items-center
+            "
+          >
+            <div>
+              <img src="images/c_t-shirt_men.png" class="w-100" alt="" />
+              <span class="sale-label">sale</span>
+            </div>
+            <div>
+              <i class="fa fa-star selected-star"></i>
+              <i class="fa fa-star selected-star"></i>
+              <i class="fa fa-star selected-star"></i>
+              <i class="fa fa-star selected-star"></i>
+              <i class="fa fa-star selected-star"></i>
+            </div>
+            <p>Men Shirt</p>
+            <p>$25.00</p>
+          </div>
+          <div
+            class="
+              collection-item
+              position-relative
+              d-flex
+              flex-column
+              col-md-6 col-lg-3
+              p-2
+              align-items-center
+            "
+          >
+            <div>
+              <img src="images/c_tunic-shirt_girl.png" class="w-100" alt="" />
+              <span class="sale-label">sale</span>
+            </div>
+            <div>
+              <i class="fa fa-star selected-star"></i>
+              <i class="fa fa-star selected-star"></i>
+              <i class="fa fa-star selected-star"></i>
+              <i class="fa fa-star selected-star"></i>
+              <i class="fa fa-star selected-star"></i>
+            </div>
+            <p>Tunic Shirt</p>
+            <p>$55.00</p>
+          </div>
+          <div
+            class="
+              collection-item
+              position-relative
+              d-flex
+              flex-column
+              col-md-6 col-lg-3
+              p-2
+              align-items-center
+            "
+          >
+            <div>
+              <img src="./images/c_undershirt.png" class="w-100" alt="" />
+              <span class="sale-label">sale</span>
+            </div>
+            <div>
+              <i class="fa fa-star selected-star"></i>
+              <i class="fa fa-star selected-star"></i>
+              <i class="fa fa-star selected-star"></i>
+              <i class="fa fa-star selected-star"></i>
+              <i class="fa fa-star selected-star"></i>
+            </div>
+            <p>Under Shirt</p>
+            <p>$25.00</p>
+          </div>
+          <div
+            class="
+              collection-item
+              position-relative
+              d-flex
+              flex-column
+              col-md-6 col-lg-3
+              p-2
+              align-items-center
+            "
+          >
+            <div>
+              <img src="./images/c_western-shirt.png" class="w-100" alt="" />
+              <span class="sale-label">sale</span>
+            </div>
+            <div>
+              <i class="fa fa-star selected-star"></i>
+              <i class="fa fa-star selected-star"></i>
+              <i class="fa fa-star selected-star"></i>
+              <i class="fa fa-star selected-star"></i>
+              <i class="fa fa-star selected-star"></i>
+            </div>
+            <p>Western Shirt</p>
+            <p>$45.00</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- special edition-->
+
+    <section id="specials" class="py-4">
+      <div class="container">
+        <div class="text-center title">
+          <h2 class="position-relative d-inline-block">Special Collections</h2>
+        </div>
+        <div id="special-collection" class="row text-center mt-4 gy-4">
+          <div class="special-collection-item col-md-6 col-lg-3">
+            <div>
+              <img src="images/special_product_1.jpg" class="w-100" alt="" />
+              <span>
+                <i class="fa fa-heart fs-4"></i>
+              </span>
+            </div>
+            <div>
+              <div class="text-dark text-capitalize">gray shirt</div>
+              <div class="fw-bold py-2">$45.50</div>
+              <button class="action-btn">Add to Cart</button>
+            </div>
+          </div>
+          <div class="special-collection-item col-md-6 col-lg-3">
+            <div>
+              <img src="images/special_product_2.jpg" class="w-100" alt="" />
+              <span>
+                <i class="fa fa-heart fs-4"></i>
+              </span>
+            </div>
+            <div>
+              <div class="text-dark text-capitalize">gray shirt</div>
+              <div class="fw-bold py-2">$45.50</div>
+              <button class="action-btn">Add to Cart</button>
+            </div>
+          </div>
+          <div class="special-collection-item col-md-6 col-lg-3">
+            <div>
+              <img src="images/special_product_3.jpg" class="w-100" alt="" />
+              <span>
+                <i class="fa fa-heart fs-4"></i>
+              </span>
+            </div>
+            <div>
+              <div class="text-dark text-capitalize">gray shirt</div>
+              <div class="fw-bold py-2">$45.50</div>
+              <button class="action-btn">Add to Cart</button>
+            </div>
+          </div>
+          <div class="special-collection-item col-md-6 col-lg-3">
+            <div>
+              <img src="images/special_product_4.jpg" class="w-100" alt="" />
+              <span>
+                <i class="fa fa-heart fs-4"></i>
+              </span>
+            </div>
+            <div>
+              <div class="text-dark text-capitalize">gray shirt</div>
+              <div class="fw-bold py-2">$45.50</div>
+              <button class="action-btn">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- offers -->
+    <section id="offers" class="py-5">
+      <div
+        class="
+          container
+          align-items-center
+          justify-content-lg-start justify-content-center
+          d-flex
+        "
+      >
+        <div class="row">
+          <div class="text-white text-capitalize mx-5">
+            <h3>Great offers for everyone</h3>
+            <h2>Upto 70% off</h2>
+            <button class="action-btn">Grab Now</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- blogs -->
+    <section id="blog" class="py-4">
+      <div class="container">
+        <div class="text-center title">
+          <h2 class="position-relative d-inline-block">Our Blogs</h2>
+        </div>
+        <div class="row mt-4">
+          <div class="card border-0 col-md-6 col-lg-4">
+            <img src="./images/blog_1.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Lorem ipsum dolor sit amet.</h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Inventore, eligendi voluptate ex ad possimus in itaque harum
+                nulla iste.
+              </p>
+              <div>
+                <span class="fw-bold">Author&nbsp;:&nbsp;</span> Ram Writer
+              </div>
+              <button class="action-btn my-2">Read More</button>
+            </div>
+          </div>
+          <div class="card border-0 col-md-6 col-lg-4">
+            <img src="./images/blog_2.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Lorem ipsum dolor sit amet.</h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Inventore, eligendi voluptate ex ad possimus in itaque harum
+                nulla iste.
+              </p>
+              <div>
+                <span class="fw-bold">Author&nbsp;:&nbsp;</span> Ram Writer
+              </div>
+              <button class="action-btn my-2">Read More</button>
+            </div>
+          </div>
+          <div class="card border-0 col-md-6 col-lg-4">
+            <img src="./images/blog_3.jpg" class="card-img-top" alt="..." />
+            <div class="card-body">
+              <h5 class="card-title">Lorem ipsum dolor sit amet.</h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Inventore, eligendi voluptate ex ad possimus in itaque harum
+                nulla iste.
+              </p>
+              <div>
+                <span class="fw-bold">Author&nbsp;:&nbsp;</span> Ram Writer
+              </div>
+              <button class="action-btn my-2">Read More</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- about us -->
+    <section id="about" class="py-4">
+      <div class="container">
+        <div class="row mt-4">
+          <div class="text-center text-lg-start title col-lg-6">
+            <h2 class="position-relative d-inline-block ms-4 mb-4">About Us</h2>
+            <p class="">
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              Voluptatem ipsa reiciendis mollitia alias repudiandae aliquid unde
+              magnam assumenda et? Beatae suscipit ullam voluptate expedita
+              ratione, aliquam quod optio magnam culpa, et neque, corporis
+              provident itaque. Mollitia placeat nihil blanditiis non
+              consequatur accusamus quas ea autem. Labore quasi corporis magni
+              nesciunt sequi quam incidunt natus laudantium itaque optio
+              expedita, ea soluta asperiores provident repellendus, corrupti
+              quos. Eos voluptas eaque quos quo magnam soluta reprehenderit
+              aliquam, animi ut rem incidunt, sed impedit nemo praesentium cum!
+              Omnis doloremque amet, error id adipisci repudiandae ut molestias
+              voluptas quibusdam saepe fuga nostrum. Iusto, praesentium
+              similique.
+            </p>
+          </div>
+          <img src="images/about_us.jpg" class="img-fluid col-lg-6" alt="" />
+        </div>
+      </div>
+    </section>
+
+    <!-- description -->
+    <section id="description" class="py-4">
+      <div class="container">
+        <div class="text-center title">
+          <h2 class="position-relative d-inline-block">Subscription</h2>
+        </div>
+        <div class="input-group mt-4">
+          <input class="form-control" type="text" />
+          <button class="action-btn">Subscribe</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- footer -->
+    <!-- <footer class="bg-dark py-4">
+      <div class="container">
+        <div class="row text-white">
+          <div class="col-md-6 col-lg-4">
+            <p class="fw-bold">Info</p>
+            <div class="mb-3">Start your journey</div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <p class="fw-bold">Contact</p>
+            <div class="d-flex align-items-center">
+              <i class="far fa-envelope me-2"></i>
+              support@abc.com
+            </div>
+            <div class="mb-3" class="d-flex align-items-center">
+              <i class="fas fa-mobile-alt me-2"></i>
+              99999999
+            </div>
+          </div>
+          <div class="col-md-6 col-lg-4">
+            <p class="fw-bold">Social</p>
+            <ul class="d-flex list-unstyled mb-3">
+              <li>
+                <i class="fab fa-facebook-square me-2"></i>
+              </li>
+              <li>
+                <i class="fab fa-instagram-square mx-2"></i>
+              </li>
+              <li>
+                <i class="fab fa-linkedin mx-2"></i>
+              </li>
+              <li>
+                <i class="fab fa-twitter-square mx-2"></i>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="d-flex justify-content-center pt-2 pb-0 text-secondary">
+          @copyright abc corporation
+        </div>
+      </div>
+    </footer> -->
+    <!-- scripts -->
+    <script src="js/jquery-3.6.0.js"></script>
+    <script src="bootstrap-5.0.2-dist/js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+  </body>
 </html>
